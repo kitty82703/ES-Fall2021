@@ -16,4 +16,42 @@
 ### 電路圖
 ![image](https://user-images.githubusercontent.com/89329256/131240289-4c45c08c-b40c-4194-a6b5-b59f62ff4316.png)
 ### 程式碼
-![image](https://user-images.githubusercontent.com/89329256/131240305-defe06fa-cf4d-443d-a629-c601ec394fea.png)
+```
+// C++ code
+//
+/*
+  This program blinks pin 13 of the Arduino (the
+  built-in LED)
+*/
+
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+  {
+    // turn the LED on (HIGH is the voltage level)
+    digitalWrite(13, HIGH);
+    delay(500);
+  	digitalWrite(13, LOW);
+  	delay(500);
+  	
+  	digitalWrite(11, HIGH);
+    delay(500);
+  	digitalWrite(11, LOW);
+  	delay(500);
+
+  	digitalWrite(9, HIGH);
+    delay(500);
+  	digitalWrite(9, LOW);
+  	delay(500);
+  
+  	digitalWrite(11, HIGH);
+    delay(500);
+  	digitalWrite(11, LOW);
+  	delay(500);
+}
+```
