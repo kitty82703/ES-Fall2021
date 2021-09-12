@@ -37,7 +37,7 @@ void loop()
 }
 ````
 ## 實作2-3, 讓你的RGB LED燈全彩模組也可會"呼吸", LED顏色變化是否有像"呼吸的效果"和示波器的波形有什麼關連性? (互動3), (2021-09-05)
-![image](https://user-images.githubusercontent.com/89329256/132972048-cacf139f-2b01-4347-b833-a72f44537ca1.png)
+![image](https://user-images.githubusercontent.com/89329256/132972381-ec923665-59f6-4e16-9674-9b5175b4cd6e.png)
 
 ### 程式碼
 ````C
