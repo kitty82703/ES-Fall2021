@@ -107,7 +107,7 @@ void loop()
   delay(1000);
 }
 ````
-## 實作2-4 analogRead(), 1024解析度 (i.e.,10-bit): 可變電阻 + 序列監視器與輸出; 當你改變可變電阻的阻值(e.g., 10K-ohm)時，序列監視器輸出的數值有什麼改變? 數值又有什麼意義呢? 可試將你的想法寫在你的GitHub Page中喔! (互動4) (2021-09-12)
+## 實作2-4 analogRead(), 1024解析度 (i.e.,10-bit): 可變電阻 + 序列監視器與輸出; 當你改變可變電阻的阻值(e.g., 10K-ohm)時，序列監視器輸出的數值有什麼改變? 數值又有什麼意義呢? 
 ![image](https://user-images.githubusercontent.com/89329256/132972302-e5169092-1c21-435a-91d7-55a538c31c7c.png)
 
 ### 程式碼
@@ -131,3 +131,35 @@ void loop()
 }
 ````
 
+## 實作2-5: 按下按鍵, Green LED亮 & Red LED滅; 放開按鍵, Green LED滅 & Red LED亮. 想要再深入的同學可以試試喔. (思考方向: digitalRead(), digitalWrite(): 按鍵 +序列輸出 + LED), (互動5) (2021-09-19) 
+
+![image](https://user-images.githubusercontent.com/89329256/135738928-2440b688-1c9a-443d-aac3-aa85b47a9c2f.png)
+
+### 程式碼
+```C
+int ledPinG = 13 ;
+int ledPinR = 8 ;
+int buttonPin = 2 ;
+void setup()
+{
+  pinMode(ledPinG, OUTPUT);
+  pinMode(ledPinR, OUTPUT);
+  pinMode(buttonPin, INPUT);
+  Serial.begin(11500);
+
+}
+
+void loop()
+{ 
+Serial.print(digitalRead(buttonPin)) ;
+  if(digitalRead(buttonPin) == 1)
+  {
+    digitalWrite(ledPinR, LOW);
+    digitalWrite(ledPinG, HIGH);
+  }
+  else{
+  digitalWrite(ledPinR, HIGH);
+  digitalWrite(ledPinG, LOW);
+  }
+}
+```
