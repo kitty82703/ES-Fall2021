@@ -43,6 +43,51 @@ void loop()
 
 ## 電路圖
 
-
+https://user-images.githubusercontent.com/89329256/138587998-cddff49f-d28d-41ac-9afc-2890d640f173.mp4
 
 ## 程式碼
+
+````C
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+int RLED = 9;
+int GLED = 8;
+
+void setup() 
+{
+  lcd.begin(16, 2);
+  Serial.begin(9600);	
+  pinMode(A1, INPUT); // Read analog voltage level (2^10)
+
+}
+
+void loop() 
+{
+  int reading = analogRead(A1);  // read analog level level (2^10)
+  lcd.setCursor(0,0);  
+  lcd.print("TMP Sensor Demo");
+
+  float voltage = (reading/1024.0) * 5.0;
+  float tempC = (voltage - 0.5) * 100.0;
+  if(tempC<38)
+  {
+    digitalWrite(RLED, LOW);
+    digitalWrite(GLED, HIGH); 
+  }
+  else
+    {
+      digitalWrite(RLED, HIGH);
+      digitalWrite(GLED, LOW);
+    }
+  lcd.setCursor(0,1);
+  lcd.print("Tmp:");
+  lcd.print(tempC);
+  lcd.print(" C");
+  delay(500);
+  lcd.clear();
+  Serial.println(reading);
+  Serial.println(voltage);  
+}
+````
+
