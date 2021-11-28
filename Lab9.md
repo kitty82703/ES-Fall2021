@@ -100,7 +100,7 @@ show_image(image, '')
 ![image](https://user-images.githubusercontent.com/89329256/143729024-16c8798a-758e-4a8a-8258-5d7c7a2ef744.png)
 
 ### 習題4
-![image](https://user-images.githubusercontent.com/89329256/143729368-d0f156e5-bd4d-4bf4-af92-dc4c1170feaa.png)
+![image](https://user-images.githubusercontent.com/89329256/143729438-8df9bb4b-7ae3-4478-87b2-e421d884a346.png))
 
 ### 習題5
 
