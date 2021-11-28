@@ -45,8 +45,8 @@ for i, item in enumerate(top_5):
 
 show_image(image, '')
 ````
-## 實作D:從網路上找一張自己喜歡的照片來試試看 (jpg/png)"""
-![image](https://user-images.githubusercontent.com/89329256/143728013-10e26870-b20d-4d0d-a58a-6b38eb7b478d.png)
+## 實作D:從網路上找一張自己喜歡的照片來試試看 (jpg/png)
+![image](https://user-images.githubusercontent.com/89329256/143728608-57ef9e90-7f5b-4903-8d91-c253e847c109.png)
 
 ### 程式碼
 ```` python
@@ -65,7 +65,7 @@ images_for_test_map = {
     "piano": "https://upload.wikimedia.org/wikipedia/commons/d/da/Steinway_%26_Sons_upright_piano%2C_model_K-132%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png",
     "honeycomb": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Honey_comb.jpg",
     "teapot": "https://upload.wikimedia.org/wikipedia/commons/4/44/Black_tea_pot_cropped.jpg",
-    "christmas": "https://img.tukuppt.com/photo-big/00/00/55/6153fd69c8a501520.jpg",
+    "christmas": "https://searchome-aws.hmgcdn.com/Article/doc19538/2.jpg",
 
 }
 
@@ -87,3 +87,27 @@ for i, item in enumerate(top_5):
 
 show_image(image, '')
 ````
+
+# Lab 9-2 Python的5個回顧練習
+
+### 習題1
+![image](https://user-images.githubusercontent.com/89329256/143728864-0e962f7b-19c6-4687-8842-8fbb50462c91.png)
+
+### 習題2
+![image](https://user-images.githubusercontent.com/89329256/143728995-1753db32-e4ac-487e-9b12-b3c285d6332f.png)
+
+### 習題3
+![image](https://user-images.githubusercontent.com/89329256/143729024-16c8798a-758e-4a8a-8258-5d7c7a2ef744.png)
+
+### 習題4
+![image](https://user-images.githubusercontent.com/89329256/143729368-d0f156e5-bd4d-4bf4-af92-dc4c1170feaa.png)
+
+### 習題5
+
+
+
+
+
+
+
+
