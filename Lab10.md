@@ -26,6 +26,57 @@ cv2.line(img, (255, 0), (0, 255), (255, 0, 255), 5)
 cv2_imshow(img)
 ````
 ### 顯示結果
+
 ![image](https://user-images.githubusercontent.com/89329256/144732514-a2d577be-cee1-42f8-91f3-6625ad190370.png)
 
+## Lab 10-3 人臉辨識實際應用
 
+### 程式碼(1)
+
+```` python
+
+#Lab實作: 試試看使用你自己在網路上找到的團體照, 並且加入你的英文名字1
+image = cv2.imread("12053.jpeg")
+haar = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') #載入分類器
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)#圖片轉灰階
+faces = haar.detectMultiScale(gray) #偵測人臉
+
+for (x,y,w,h) in faces:
+    cv2.rectangle(image,(x,y),(x+w,y+h),(0,255,0),2) #畫矩形框 可改框的顏色/線條粗細
+#文字 cv2.putText(影像, 文字, 座標, 字型, 大小, 顏色, 線條寬度, 線條種類)
+cv2.putText(image, ('Iris by CV2'), (+100,+100), cv2.FONT_HERSHEY_SIMPLEX,
+2, (0, 255, 255), 5, cv2.LINE_AA)
+plt.figure(figsize=(12,10)) #設定顯示尺寸
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)) #BGR to RGB
+print('找到臉的數量:',len(faces))
+
+````
+
+### 顯示結果
+
+![image](https://user-images.githubusercontent.com/89329256/144733453-a13bb3de-a42d-42c4-a223-29ee2ef306df.png)
+
+### 程式碼(2)
+
+````python
+
+#Lab實作: 試試看使用你自己在網路上找到的團體照, 並且加入你的英文名字2
+
+import cv2
+import face_recognition
+# %matplotlib inline
+import matplotlib.pyplot as plt
+image = face_recognition.load_image_file("12053.jpeg") #92
+faces = face_recognition.face_locations(image,model='cnn')
+print("找到臉的數量=",len(faces))
+for (top, right, bottom, left) in faces: #畫矩形框 可改框的顏色/線條粗細
+    cv2.rectangle(image, (left, top), (right, bottom), (0, 255, 0), 2)
+cv2.putText(image, ('Iris by CV2'), (+100,+100), cv2.FONT_HERSHEY_SIMPLEX,
+2, (0, 255, 255), 5, cv2.LINE_AA)
+plt.figure(figsize=(12,10))
+#plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+plt.imshow(image)
+````
+### 顯示結果
+
+![image](https://user-images.githubusercontent.com/89329256/144733491-e67ea22a-c077-4316-b012-3968cc05211a.png)
